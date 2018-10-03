@@ -126,13 +126,11 @@
 
     /* -- CV */
     #CV {
-        width: 55%;
+        width: 75%;
         height: 35em;
         margin: auto;
-        background: url(../image/HTML5_logo_and_wordmark.svg) no-repeat left top,
-        url(../image/CSS3.svg) no-repeat left bottom,
-        url(../image/Unofficial_JavaScript_logo_2.svg) no-repeat right bottom;
         background-size: 9%;
+        display: flex;
     }
     .titre_comp {
         display: flex;
@@ -155,19 +153,13 @@
         margin-bottom: 0px;
         overflow: auto;
     }
-    #listeComp {
-        height: 25em;
-    }
-    #Competences {
-        width: 30%;
+ 	.section {
+		width: 30%;
         height: 100%;
-        float: left;
-    }
-    #Formations {
-        width: 30%;
-        height: 100%;
-        float: right;
-    }
+        margin-left: 5%;
+        margin-right: 5%;
+	}
+
     .Competence {
         font-family: Arial;
         font-weight: 700;
@@ -183,20 +175,20 @@
         margin-bottom: 10%;
         margin-top: 10%;
     }
-    .Formation {
+    .Formation, .Experience {
         font-family: Arial;
         font-weight: bold;
         list-style: none;
         margin-bottom: 20%;
     }
-    .Formation:last-child {
+    .Formation:last-child, .Experience:last-child {
         margin-bottom: 0;
     }
     .commentaire {
         font-style: italic;
         font-weight: 800;
     }
-    .diplome {
+    .diplome, .poste {
         text-decoration: underline;
     }
     .date {

@@ -4,12 +4,14 @@ class Cv {
     private $typeComp;
     private $typeNiveau;
     private $competences;
+    private $experiences;
     
-    function __construct($formations,$typeComp,$typeNiveau,$competences){
+    function __construct($formations,$typeComp,$typeNiveau,$competences,$experiences){
         $this->formations = $formations;
         $this->typeComp =  $typeComp;
         $this->typeNiveau = $typeNiveau;
         $this->competences = $competences;
+        $this->experiences = $experiences;
     }
     /**
      * @return mixed
@@ -39,7 +41,12 @@ class Cv {
         return $this->competences;
     }
 
-    
-    
+    /**
+     * @return mixed
+     */
+    public function getExperiences(){
+        return $this->experiences;
+    }
+
 }
 ?>

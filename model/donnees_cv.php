@@ -50,17 +50,21 @@ try {
     $requete = "SELECT * FROM Formations";
     $forms = requeteSqlObj($connex, $requete);
     
-    $requete = "SELECT DISTINCT(type) FROM Competences";
+    $requete = "SELECT * FROM Experience";
+    $exps = requeteSqlObj($connex, $requete);
+    
+    $requete = "SELECT type FROM TypeComp";
     $typeComp = requeteSqlNum($connex, $requete);
     
-    $requete = "SELECT DISTINCT(niveau) FROM Competences";
+    $requete = "SELECT niveau FROM NiveauComp";
     $typeNiveau = requeteSqlNum($connex, $requete);
     
-    $requete = "SELECT * FROM Competences";
+    $requete = "SELECT nom, TypeComp.type, NiveauComp.niveau FROM Competences 
+				INNER JOIN TypeComp ON Competences.type = TypeComp.id
+				LEFT JOIN NiveauComp ON Competences.niveau = NiveauComp.id";
     $comps = requeteSqlObj($connex, $requete);
     
-    $cv = new Cv($forms, $typeComp, $typeNiveau, $comps);
-    
+    $cv = new Cv($forms, $typeComp, $typeNiveau, $comps, $exps);
     unset($connex);
        
 } catch (PDOException $e) {
