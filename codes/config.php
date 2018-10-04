@@ -1,6 +1,6 @@
 <?php
-	$host="nwpresfrezadmin.mysql.db";
-	$user="nwpresfrezadmin";
-	$mdp="MiU7qRV2hTcU1F27UE3z77frwU59iq";
-	$dbname="nwpresfrezadmin";
+	$host="sql7.freemysqlhosting.net";
+	$user="sql7259716";
+	$mdp="NmuTTmhPHp";
+	$dbname="sql7259716";
 ?>
