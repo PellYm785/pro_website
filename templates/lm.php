@@ -1,12 +1,3 @@
-<?php
-if (file_exists('LM.xml')) {
-    $xml = simplexml_load_file('LM.xml');
-} else {
-    exit('Echec lors de l\'ouverture du fichier LM.xml.');
-}
-
-?>
-
 <section id="LM" class="show">
 	<article>
 		<div class="tete">

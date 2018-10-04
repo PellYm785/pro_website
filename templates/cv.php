@@ -45,9 +45,6 @@ $mois = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin","Juillet", "
 						echo $duree;
 						?>
 					</p>
-					<?php if($formation->commentaire != "" ): ?>
-						<p id="commentaire"><?php echo $formation->commentaire ?></p>
-					<?php endif ?>
 				</li>
 			<?php 
 			endforeach; 
