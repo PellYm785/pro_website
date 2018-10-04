@@ -34,8 +34,10 @@
 	    <div id="border_title_bottom" class="border_title">
 	    </div>
 	</header>
-
+	
+	
 	<nav id="menu">
+		
 	    <ul>
 	        <li id="LM_in" class="selected" data-link="LM">
 	            <div>
@@ -49,3 +51,8 @@
 	        </li>
 	    </ul>
 	</nav>
+	<div id="container-icon-menu">
+		<?php
+		include "image/icon-menu.svg";
+		?>
+	</div>

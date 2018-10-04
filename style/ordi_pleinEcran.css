@@ -60,6 +60,11 @@
         top: 30px;
         width: 13%;
     }
+    
+    #container-icon-menu {
+		display: none;
+	}
+    
     nav li {
         background: rgba(255, 255, 255, 0.8);
         font-family: Arial;
@@ -84,7 +89,7 @@
         margin: auto;
     }
     .hide {
-        display: none;
+        display: none !important;
     }
 
     /* -- Lettre de motivation */
