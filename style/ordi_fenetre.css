@@ -132,7 +132,7 @@
 
 	/* -- CV */
 	#CV {
-        width: 40%;
+        width: 75%;
         height: 35em;
         margin: auto;
         background-size: 9%;
@@ -160,10 +160,15 @@
         overflow: auto;
     }
  	.section {
-		width: 30%;
+		width: 20em;
         height: 100%;
-        margin-left: 5%;
-        margin-right: 5%;
+        display:none;
+        margin-left: 2%;
+        margin-right: 2%;
+	}
+	
+	.section:first-of-type{
+		display:block;
 	}
 
     .Competence {
@@ -208,6 +213,10 @@
     
     #container-fleche-droite *{
     	margin:auto;
+    }
+    
+    #container-fleche-droite label{
+    	margin-right: 10%;
     }
 	footer {
 		clear: left;
