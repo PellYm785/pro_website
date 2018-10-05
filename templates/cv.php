@@ -85,4 +85,10 @@ $mois = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin","Juillet", "
 			?>				
 		</ul>
 	</div>
+	<div id="container-fleche-droite">
+		<label>suivant</label>
+		<svg height="30" width="30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<polygon points="0,0 30,15 0,30" fill="black" />
+        </svg>
+	</div>
 </section>

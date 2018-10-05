@@ -1,5 +1,4 @@
 <?php
-
 include 'templates/header.php';
 if (file_exists('model/LM.xml')) {
     $xml = simplexml_load_file('model/LM.xml');

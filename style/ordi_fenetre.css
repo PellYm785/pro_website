@@ -132,95 +132,83 @@
 
 	/* -- CV */
 	#CV {
-		width: 88%;
-		height: 40em;
-		margin-left: 0px;
-		background: url(../image/HTML5_logo_and_wordmark.svg) no-repeat left top,
-			url(../image/CSS3.svg) no-repeat left bottom,
-			url(../image/Unofficial_JavaScript_logo_2.svg) no-repeat right bottom;
-		background-size: 9%;
+        width: 40%;
+        height: 35em;
+        margin: auto;
+        background-size: 9%;
+        display: flex;
+    }
+    .titre_comp {
+        display: flex;
+        background: black;
+        color: white;
+        font-family: Arial;
+        height: 25%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .titre_comp div {
+        margin: auto;
+    }
+
+    #CV ul {
+        max-height: 75%;
+        background: rgba(255, 255, 255, 0.86);
+        margin-top: 0px;
+        margin-bottom: 0px;
+        overflow: auto;
+    }
+ 	.section {
+		width: 30%;
+        height: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
 	}
-	#Element {
-		width: 70%;
-		height: 40em;
-		background-image: url("../image/Untitled-1-02.svg");
-		background-repeat: no-repeat;
-		border: solid 5px;
-		margin: auto;
-		margin-top: 50px;
-	}
-	.boutonCV {
-		font-family: Arial;
-		text-align: center;
-	}
-	.boutonCV:hover {
-		cursor: pointer;
-	}
-	.ruban {
-		width: 70%;
-		height: 100%;
-		margin: auto;
-		margin-bottom: 5%;
-		display: block;
-	}
-	.fleche {
-		width: 5%;
-		height: 1.4em;
-		margin: auto;
-	}
-	.box {
-		border-radius: 20px;
-		background: white;
-	}
-	.content {
-		overflow: auto;
-	}
-	#listeComp {
-		height: 25em;
-		margin-top: -6%;
-	}
-	#Competences {
-		width: 40%;
-		float: left;
-	}
-	#Formations {
-		width: 40%;
-		float: right;
-	}
-	.Competence {
-		font-family: Arial;
-		font-weight: 700;
-		list-style: none;
-		margin-bottom: 5%;
-		margin-left: 10%;
-	}
-	.categorie {
-		text-decoration: underline;
-		font-family: Arial;
-		font-weight: bold;
-		list-style: none;
-		margin-bottom: 10%;
-		margin-top: 10%;
-	}
-	.Formation {
-		font-family: Arial;
-		font-weight: bold;
-		list-style: none;
-		margin-bottom: 20%;
-	}
-	#dernierFormation {
-		margin-bottom: 0%;
-	}
-	.commentaire {
-		font-style: italic;
-		font-weight: 800;
-	}
-	.diplome {
-		text-decoration: underline;
-	}
-	.date {
-		font-weight: normal;
-	}
+
+    .Competence {
+        font-family: Arial;
+        font-weight: 700;
+        list-style: none;
+        margin-bottom: 5%;
+        margin-left: 10%;
+    }
+    .categorie {
+        text-decoration: underline;
+        font-family: Arial;
+        font-weight: bold;
+        list-style: none;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    .Formation, .Experience {
+        font-family: Arial;
+        font-weight: bold;
+        list-style: none;
+        margin-bottom: 20%;
+    }
+    .Formation:last-child, .Experience:last-child {
+        margin-bottom: 0;
+    }
+    .commentaire {
+        font-style: italic;
+        font-weight: 800;
+    }
+    .diplome, .poste {
+        text-decoration: underline;
+    }
+    .date {
+        font-weight: normal;
+    }
+    #container-fleche-droite{
+    	display: flex;
+    	height: 30px;
+    	margin: auto;
+    }
+    
+    #container-fleche-droite *{
+    	margin:auto;
+    }
 	footer {
 		clear: left;
 		height: 2em;
