@@ -1,5 +1,6 @@
 var $list_li_menu = $('nav').children().children();
 var menu_hide = true;
+var switcher = new Switch('.section-cv') ;
 
 $list_li_menu.each(function(index, element){
     $(element).click(function(){
@@ -10,9 +11,11 @@ $list_li_menu.each(function(index, element){
             $('section').addClass("hide");
             $('#'+$(element).data('link')).removeClass("hide");
             $('#'+$(element).data('link')).addClass("show");
-            if($(element)[0].id == 'CV_in'){
-                var switcher = new Switch('.section-cv') ;
+            if($(element)[0].id == 'CV_in' && $(window).width() < 1024){              
                 switcher.build();
+                
+			}else{
+				switcher.destroy();
 			}
         }
     });
@@ -21,11 +24,13 @@ $list_li_menu.each(function(index, element){
 $(window).resize(function(){
     if($(window).width() > 1024){
         $("#menu").show();
+        switcher.destroy();
     }else{
         $("#menu").hide();
         $("#container-icon-menu").css({"background": "grey" });
         $("rect").attr("fill", "black");
         menu_hide = true;
+        switcher.build();
     }
 
 });

@@ -6,53 +6,99 @@ function Switch(className){
     this.switcherRight = null;
     this.switcherLeft = null;
     this.activeElementIndex = 0;
-    this.elements = null
+    this.elements = null;
+    this.built = false;
 }
 
 Switch.prototype.build = function () {
-    var positionElement = null,
-        heightElement = 0,
-        widthElement = 0;
+	if(!this.built){
+	    var positionElement = null,
+	        heightElement = 0,
+	        widthElement = 0;
+	
+	    this.elements = $(this.className);
+	    activeElement = this.elements.eq(this.activeElementIndex);
+	    this.elements.hide();
+	
+	    activeElement.show();
+	    positionElement = activeElement.offset();
+	    heightElement = activeElement.height();
+	    widthElement = activeElement.width();
+	
+	    activeElement.before(this.switcherLeftHTML);
+	    activeElement.after(this.switcherRightHTML);
+	
+	    this.switcherLeft = activeElement.parent().find('.switcher-left');
+	    this.switcherRight = activeElement.parent().find('.switcher-right');
+	
+	    this.switcherLeft.hide();
+	    this.switcherLeft.css('top', positionElement.top+heightElement/2);
+	    this.switcherLeft.css('left', positionElement.left-30-25);
+	
+	    this.switcherRight.css('top', positionElement.top+heightElement/2);
+	    this.switcherRight.css('left', positionElement.left+widthElement+25);
+	
+	    var object = this;
+	    
+	    this.switcherLeft.click(function(){switch_left(object)});
+	    this.switcherRight.click(function(){switch_right(object)});
+	    
+	    this.built = true;
+	}
+}
 
-    this.elements = $(this.className);
-    activeElement = this.elements.eq(this.activeElementIndex);
-    this.elements.hide();
+Switch.prototype.replace = function(){
+	if(this.built){
+	    var activeElement = null,
+	    	positionElement = null,
+        	heightElement = 0,
+        	widthElement = 0;
+	    
+		activeElement = this.elements.eq(this.activeElementIndex);
+		
+	    positionElement = activeElement.offset();
+	    heightElement = activeElement.height();
+	    widthElement = activeElement.width();
+		
+	    this.switcherLeft.css('top', positionElement.top+heightElement/2);
+	    this.switcherLeft.css('left', positionElement.left-30-25);
+	
+	    this.switcherRight.css('top', positionElement.top+heightElement/2);
+	    this.switcherRight.css('left', positionElement.left+widthElement+25);
+	}
+}
 
-    activeElement.show();
-    positionElement = activeElement.offset();
-    heightElement = activeElement.height();
-    widthElement = activeElement.width();
+Switch.prototype.destroy = function (){
+	if(this.built){
+		this.elements.show();
+		this.switcherLeft.remove();
+		this.switcherLeft = null;
+		this.switcherRight.remove();
+		this.switcherRight = null;
+		this.built = false;
+	}
+}
 
-    activeElement.before(this.switcherLeftHTML);
-    activeElement.after(this.switcherRightHTML);
+function switch_left(switcher) {
+    switcher.elements.eq(switcher.activeElementIndex).hide();
+    switcher.activeElementIndex--;
+    switcher.elements.eq(switcher.activeElementIndex).show();
+    if(switcher.activeElementIndex == 0){
+    	switcher.switcherLeft.hide();
+    }else{
+    	switcher.switcherLeft.show();
+    	switcher.switcherRight.show();
+    }
+}
 
-    this.switcherLeft = activeElement.parent().find('.switcher-left');
-    this.switcherRight = activeElement.parent().find('.switcher-right');
-
-    this.switcherLeft.hide();
-    this.switcherLeft.css('top', positionElement.top+heightElement/2);
-    this.switcherLeft.css('left', positionElement.left-30-25);
-
-    this.switcherRight.css('top', positionElement.top+heightElement/2);
-    this.switcherRight.css('left', positionElement.left+widthElement+25);
-
-    this.switcherLeft.click(function () {
-        console.log('ok');
-        this.elements.eq(this.activeElementIndex).hide();
-        this.activeElementIndex--;
-        elements.eq(this.activeElementIndex).show();
-        if(this.activeElementIndex == 0){
-            this.switcherLeft.hide();
-        }
-    });
-
-    this.switcherRight.click(function () {
-        console.log(this);
-        this.elements.eq(this.activeElementIndex).hide();
-        this.activeElementIndex++;
-        this.elements.eq(this.activeElementIndex).show();
-        if(this.activeElementIndex == elements.length-1){
-            this.switcherRight.hide();
-        }
-    });
-};
+function switch_right(switcher) {
+	switcher.elements.eq(switcher.activeElementIndex).hide();
+	switcher.activeElementIndex++;
+	switcher.elements.eq(switcher.activeElementIndex).show();
+    if(switcher.activeElementIndex == switcher.elements.length-1){
+    	switcher.switcherRight.hide();
+    }else{
+    	switcher.switcherLeft.show();
+    	switcher.switcherRight.show();
+    }
+}

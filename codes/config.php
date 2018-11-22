@@ -1,6 +1,6 @@
 <?php
 	$host="localhost";
-	$user="root";
-	$mdp="";
+	$user="admin";
+	$mdp="admin";
 	$dbname="pro_website";
 ?>
