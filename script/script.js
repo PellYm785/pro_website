@@ -13,7 +13,6 @@ $list_li_menu.each(function(index, element){
             $('#'+$(element).data('link')).addClass("show");
             if($(element)[0].id == 'CV_in' && $(window).width() < 1024){              
                 switcher.build();
-                
 			}else{
 				switcher.destroy();
 			}
@@ -24,15 +23,16 @@ $list_li_menu.each(function(index, element){
 $(window).resize(function(){
     if($(window).width() > 1024){
         $("#menu").show();
-        switcher.destroy();
+        switcher.disable();
     }else{
         $("#menu").hide();
         $("#container-icon-menu").css({"background": "grey" });
         $("rect").attr("fill", "black");
         menu_hide = true;
         switcher.build();
+        switcher.enable();
+        switcher.replace();
     }
-
 });
 
 $("#container-icon-menu").click(function(){

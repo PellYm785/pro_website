@@ -1,5 +1,5 @@
-Switch.prototype.switcherLeftHTML = '<div class="switcher-right" style="position: absolute;"><svg height="30" width="30" version="1.1" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 30,15 0,30" fill="black" /></svg></div>';
-Switch.prototype.switcherRightHTML = '<div class="switcher-left" style="position: absolute;"><svg height="30" width="30" version="1.1" xmlns="http://www.w3.org/2000/svg"><polygon points="30,0 0,15 30,30" fill="black" /></svg></div>';
+Switch.prototype.switcherLeftHTML = '<div class="switcher-right" style="position: absolute;"><svg shape-rendering="geometricPrecision" height="40" width="40" version="1.1" xmlns="http://www.w3.org/2000/svg"><polygon points="3,3 33,18 3,33" fill="rgba(255,255,255,0.5)" stroke="black" stroke-width="2"/></svg></div>';
+Switch.prototype.switcherRightHTML = '<div class="switcher-left" style="position: absolute;"><svg shape-rendering="geometricPrecision" height="40" width="40" version="1.1" xmlns="http://www.w3.org/2000/svg"><polygon points="33,3 3,18 33,33" fill="rgba(255,255,255,0.5)" stroke="black" stroke-width="2"/></svg></div>';
 
 function Switch(className){
     this.className = className;
@@ -17,7 +17,7 @@ Switch.prototype.build = function () {
 	        widthElement = 0;
 	
 	    this.elements = $(this.className);
-	    activeElement = this.elements.eq(this.activeElementIndex);
+	    var activeElement = this.elements.eq(this.activeElementIndex);
 	    this.elements.hide();
 	
 	    activeElement.show();
@@ -40,12 +40,42 @@ Switch.prototype.build = function () {
 	
 	    var object = this;
 	    
-	    this.switcherLeft.click(function(){switch_left(object)});
-	    this.switcherRight.click(function(){switch_right(object)});
+	    this.switcherLeft.click(function(){switch_left(object);});
+	    this.switcherRight.click(function(){switch_right(object);});
 	    
 	    this.built = true;
 	}
 }
+
+Switch.prototype.disable = function(){
+    if(this.built){
+        this.switcherLeft.hide();
+        this.switcherRight.hide();
+        this.elements.show();
+    }
+}
+
+Switch.prototype.enable = function(){
+    if(this.built){
+       var activeElement = this.elements.eq(this.activeElementIndex);
+
+       this.elements.hide();
+       activeElement.show();
+
+       this.switcherLeft.show();
+       this.switcherRight.show();
+
+        if(switcher.activeElementIndex == 0){
+            switcher.switcherLeft.hide();
+        }else if(switcher.activeElementIndex == switcher.elements.length-1){
+            switcher.switcherRight.hide();
+        }else{
+            switcher.switcherLeft.show();
+            switcher.switcherRight.show();
+        }
+    }
+}
+
 
 Switch.prototype.replace = function(){
 	if(this.built){
@@ -53,16 +83,16 @@ Switch.prototype.replace = function(){
 	    	positionElement = null,
         	heightElement = 0,
         	widthElement = 0;
-	    
+
 		activeElement = this.elements.eq(this.activeElementIndex);
-		
+
 	    positionElement = activeElement.offset();
 	    heightElement = activeElement.height();
 	    widthElement = activeElement.width();
-		
+
 	    this.switcherLeft.css('top', positionElement.top+heightElement/2);
 	    this.switcherLeft.css('left', positionElement.left-30-25);
-	
+
 	    this.switcherRight.css('top', positionElement.top+heightElement/2);
 	    this.switcherRight.css('left', positionElement.left+widthElement+25);
 	}
@@ -79,10 +109,16 @@ Switch.prototype.destroy = function (){
 	}
 }
 
+
 function switch_left(switcher) {
-    switcher.elements.eq(switcher.activeElementIndex).hide();
+    var activeElement = switcher.elements.eq(switcher.activeElementIndex);
+
+    activeElement.hide();
     switcher.activeElementIndex--;
-    switcher.elements.eq(switcher.activeElementIndex).show();
+
+    activeElement = switcher.elements.eq(switcher.activeElementIndex);
+    activeElement.animate();
+    activeElement.show();
     if(switcher.activeElementIndex == 0){
     	switcher.switcherLeft.hide();
     }else{
@@ -92,9 +128,16 @@ function switch_left(switcher) {
 }
 
 function switch_right(switcher) {
-	switcher.elements.eq(switcher.activeElementIndex).hide();
+    var activeElement = switcher.elements.eq(switcher.activeElementIndex);
+
+    activeElement.animate();
+    activeElement.hide();
 	switcher.activeElementIndex++;
-	switcher.elements.eq(switcher.activeElementIndex).show();
+
+    activeElement = switcher.elements.eq(switcher.activeElementIndex);
+    activeElement.animate();
+    activeElement.show();
+
     if(switcher.activeElementIndex == switcher.elements.length-1){
     	switcher.switcherRight.hide();
     }else{

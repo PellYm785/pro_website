@@ -2,332 +2,252 @@
 
 @media all and (max-device-width: 480px)
 {
-
-
-  body
-  {
+  html {
+    margin: 0;
+    padding: 0;
+    background: url(../image/fondLM.png) no-repeat center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardis�e */
+  }
+  body {
     overflow-y: scroll;
-    height: 70%;
-    width: 100%;
-    margin-left: -1px;
+  }
+  section {
+    margin: auto;
   }
 
-  section
-  {
-    width: 100%;
-  }
-
-  /*.bloc
-  {
-    margin:auto;
-    width:40em;
-    height:50em;
-    display:none;
-    background:#dcdcdc;
-    border:solid  #b8b8b8 ;
-  }*/
-
-
-  /* -- en-tÃªte*/
-
-  header
-  {
-    text-align:center;
-    font-family:Arial;
+  /* -- en-tête*/
+  header {
+    background: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    font-family: Arial;
     font-weight: bold;
-    color: 	#565655;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width:100%;
+    color: #de985a;
+    margin: auto;
+    margin-top: 1%;
+    width: 50%;
+  }
+  h1 {
+    font-size: large;
   }
 
-
-
-  #line
-  {
-    background-image:linear-gradient(60deg, white,  #B28155);
-    height: 20px;
-    width:102.2%;
+  .border_title {
+    height: 0.2em;
+    margin: auto;
+    background: #de985a;
   }
 
   /* -- menu */
 
-  #menu
-  {
-    position: sticky;
-    top:-1px;
-    display:flex;
-    width:102.2%;
-    height: 5em;
-    margin-left: -2px;
-    border-top: solid 3px #646464;
-    border-bottom: solid 3px #646464;
-  }
 
-  nav
-  {
-    width: 50%;
-    display:flex;
+  nav {
+    position: fixed;
     background: white;
-    color: 	#565655;
-    text-align:center;
+    height: 100%;
+    right: 0px;
+    top: 0px;
   }
 
-  nav div
-  {
+  #menu{
+    display: none;
+  }
+
+  #container-icon-menu{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    padding: 16px;
+    background: grey;
+
+  }
+
+  nav ul {
+    margin-top: 90px;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  nav li {
+    padding-left: 50px;
+    padding-right: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: Arial;
+    font-weight: bold;
+    display: flex;
+    list-style: none;
+    height: 40px;
+
+  }
+
+
+  nav li div {
     margin: auto;
-    font-size: xx-large;
+    width: 100%;
+    text-align: center;
   }
-  
-  #CV_in
-  {
-    margin-right:0px;
-    font-family:Arial;
-    font-weight: bold;
+  .selected {
+    background-color: #58d9ff;
   }
-
-
-
-  #LM_in
-  {
-    font-family:Arial;
-    font-weight: bold;
+  nav div {
+    margin: auto;
+  }
+  .hide {
+    display: none !important;
   }
 
   /* -- Lettre de motivation */
-
-  #LM
-  {
-    width: 100%;
-    margin-left: 0px;
-  }
-  
-  #fondLM
-  {
-    height: 5em;
-    width: 102.2%;
-    background: url("../image/fondLM.png") no-repeat;
-  }
-
-  #LM article
-  {
-    margin: 2%;
-    width:100%;
-    /*text-align: justify;*/
-    background:white;
-    font-family:Trebuchet MS;
-    font-size:50%;
-  }
- 
-  #date
-  {
-    margin-right:5%;
-    margin-bottom:5%;
-    text-align:right;
-  }
-  
-  #debutCorps
-  {
-    margin-top:5%;
-  }
-  
- 
-  #corps
-  {
-    margin-top:5%;
-  }
-
-
-  #pied
-  {
-    margin-right:5%;
-    text-align:right;
-  }
-
-  .sans_espace
-  {
-    margin:0px;
-  }
-
-  .sans_espace_top
-  {
-    margin-top:0px;
-  }
-
-
-  /* -- CV */
-  #CV
-  { 
-    width:100%;
-    padding-bottom: 50%;
-    margin-left: 0px;
-    background:url(../image/HTML5_logo_and_wordmark.svg) no-repeat left bottom, 
-      url(../image/CSS3.svg) no-repeat center bottom, 
-      url(../image/Unofficial_JavaScript_logo_2.svg) no-repeat right bottom; 
-    background-size: 9%;
-  }
-
-  
-  #Element
-  {
-    width:70%;
-    height: 50em;
+  #LM article {
     margin: auto;
-    margin-top:50px;
+    margin-top: 1.5%;
+    margin-bottom: 2.5%;
+    overflow: auto;
+    width: 70%;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 1px 27px #555;
+    font-family: Trebuchet MS;
+    text-align: justify;
+    padding: 3%;
+    padding-bottom: 1%;
+  }
+  #date {
+    margin-right: 5%;
+    margin-bottom: 8%;
+    text-align: right;
+  }
+  #debutCorps {
+    margin-top: 5%;
+  }
+  #corps {
+    margin-top: 5%;
+  }
+  #pied {
+    margin-top: 10%;
+    margin-right: 5%;
+    text-align: right;
+  }
+  .sans_espace {
+    margin: 0px;
+  }
+  .sans_espace_top {
+    margin-top: 0px;
+  }
+
+  /* -- CV ------------------------------------------------*/
+  #CV {
+    width: 75%;
+    height: 35em;
+    margin: auto;
+    background-size: 9%;
+    display: flex;
+    margin-top: 10% ;
+    margin-bottom: 10% ;
+  }
+  .titre_comp {
+    display: flex;
+    background: black;
+    color: white;
+    font-family: Arial;
+    height: 25%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .titre_comp div {
+    margin: auto;
+  }
+
+  #CV ul {
+    max-height: 75%;
+    background: rgba(255, 255, 255, 0.86);
+    margin-top: 0px;
+    margin-bottom: 0px;
     overflow: auto;
   }
-
-  .boutonCV
-  {
-    font-family:Arial;
-    text-align:center;
-    position: sticky;
-    top:0px;
-    background: white;
-  }
-
-  .ruban
-  {
-    width:100%;
-    height:100%;
-    margin:auto;
-    margin-bottom:5%;
-    display: block;
-
-  }
-
-
-  .fleche
-  {
-    width:5%;
-    height:1.4em;
-    margin:auto;
-  }
-
- 
-  
-  #listeComp
-  {
-    width:90%;
-  }
-
-  #Competences
-  {
-    width:100%;
+  .section-cv {
+    width: 20em;
+    height: 100%;
     margin: auto;
+
   }
 
-  #Formations
-  {
-    width:100%;
-    margin: auto;
+  .Competence {
+    font-family: Arial;
+    font-weight: 700;
+    list-style: none;
+    margin-bottom: 5%;
+    margin-left: 10%;
   }
-
-  .categorie
-  {	
-  	text-decoration: underline;
-  	font-family:Arial;
+  .categorie {
+    text-decoration: underline;
+    font-family: Arial;
     font-weight: bold;
     list-style: none;
     margin-bottom: 10%;
+    margin-top: 10%;
   }
-  
-  .Competence
-  {
-    font-family:Arial;
-    font-weight: bold;
-    list-style: none;
-    margin-bottom: 10%;
-     margin-left:10%;
-  }
-
-  .Formation
-  {
-    font-family:Arial;
+  .Formation, .Experience {
+    font-family: Arial;
     font-weight: bold;
     list-style: none;
     margin-bottom: 20%;
   }
-  
-  #dernierFormation
-  {
-    margin-bottom: 0%;
-  }	
-
-  .diplome
-  {
-    text-decoration: underline;
-
+  .Formation:last-child, .Experience:last-child {
+    margin-bottom: 0;
   }
-
-  .date
-  {
+  .commentaire {
+    font-style: italic;
+    font-weight: 800;
+  }
+  .diplome, .poste {
+    text-decoration: underline;
+  }
+  .date {
     font-weight: normal;
   }
-
-  footer 
-  {
+  #container-fleche-droite{
     display: flex;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    height: 20em;
-    margin-top:2%;
-    text-align: center;
-    background: url("../image/fondLM.png") no-repeat;
-    
-  }
-
-  footer ul 
-  {
+    height: 30px;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
+    margin-right: 0px;
   }
 
+  #container-fleche-gauche{
+    display: flex;
+    height: 30px;
+    margin: auto;
+    margin-left: 0px;
+  }
 
-  
-  footer li
-  {
-  	display: flex;
+  #container-fleche-droite *, #container-fleche-gauche *{
+    margin:auto;
+  }
+
+  footer {
     height: 2em;
-   
-    border-radius: 50px;
-    border: solid #565655;
-   	margin-bottom:2%;
-    font-size:2em;
-    font-family:Arial;
-    color: 	#565655;
-    background: white;
   }
-
-  footer div
-  {
-  	margin: auto;
-  }
-  
-  a
-  {
-  	color:#DCDCDC;
-  	text-decoration::#DCDCDC;
-  }
-  
-  #Email
-  {
-     width: 19em;
-  }
-  
-  #Tel
-  {
-    width: 13em;
+  footer ul {
+    display: flex;
+    width: 95%;
     margin: auto;
-    margin-bottom:2%;
   }
-  
-  #Nom
-  {
-    width: 10em;
+  footer li {
+    display: flex;
+    height: 2em;
+    width: 20%;
+    border-radius: 19px;
+    text-align:center;
+    font-family: Arial;
+    color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+    background: rgba(205, 205, 205, 0.6);
+    box-shadow: 1px 1px 12px #a8ffbb;
+    margin-left: 2.8%;
+  }
+  footer li div {
     margin: auto;
+  }
+  #Email {
+    width: 38%;
   }
 }

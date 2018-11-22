@@ -1,3 +1,8 @@
 .buildpath
 .project
 .settings/
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/pro_website.iml
+.idea/modules.xml
+.idea/misc.xml
