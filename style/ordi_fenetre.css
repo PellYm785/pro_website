@@ -90,7 +90,7 @@
         margin: auto;
     }
 	.hide {
-		display: none;
+		display: none !important;
 	}
 
 	/* -- Lettre de motivation */
@@ -130,13 +130,15 @@
 		margin-top: 0px;
 	}
 
-	/* -- CV */
+	/* -- CV ------------------------------------------------*/
 	#CV {
         width: 75%;
         height: 35em;
         margin: auto;
         background-size: 9%;
         display: flex;
+		margin-top: 10% ;
+		margin-bottom: 10% ;
     }
     .titre_comp {
         display: flex;
@@ -159,16 +161,11 @@
         margin-bottom: 0px;
         overflow: auto;
     }
- 	.section {
+ 	.section-cv {
 		width: 20em;
         height: 100%;
-        display:none;
-        margin-left: 2%;
-        margin-right: 2%;
-	}
-	
-	.section:first-of-type{
-		display:block;
+        margin: auto;
+
 	}
 
     .Competence {
@@ -209,17 +206,21 @@
     	display: flex;
     	height: 30px;
     	margin: auto;
+		margin-right: 0px;
     }
-    
-    #container-fleche-droite *{
+
+	#container-fleche-gauche{
+		display: flex;
+		height: 30px;
+		margin: auto;
+		margin-left: 0px;
+	}
+
+    #container-fleche-droite *, #container-fleche-gauche *{
     	margin:auto;
     }
-    
-    #container-fleche-droite label{
-    	margin-right: 10%;
-    }
+
 	footer {
-		clear: left;
 		height: 2em;
 	}
 	footer ul {
