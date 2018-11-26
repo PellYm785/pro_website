@@ -65,13 +65,13 @@ Switch.prototype.enable = function(){
        this.switcherLeft.show();
        this.switcherRight.show();
 
-        if(switcher.activeElementIndex == 0){
-            switcher.switcherLeft.hide();
-        }else if(switcher.activeElementIndex == switcher.elements.length-1){
-            switcher.switcherRight.hide();
+        if(this.activeElementIndex == 0){
+            this.switcherLeft.hide();
+        }else if(this.activeElementIndex == this.elements.length-1){
+            this.switcherRight.hide();
         }else{
-            switcher.switcherLeft.show();
-            switcher.switcherRight.show();
+            this.switcherLeft.show();
+            this.switcherRight.show();
         }
     }
 }

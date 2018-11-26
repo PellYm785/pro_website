@@ -29,32 +29,28 @@
 
     nav {
         position: fixed;
-        background: white;
-        height: 100%;
-        right: 0px;
+        display: flex;
+        background: #1b1b1b;
+        height: 4%;
+        width: 100%;
+        left: 0px;
         top: 0px;
     }
 
 
-    /* -- menu */
-    /* #menu {
-    width: 50%;
-    height: 2em;
-    margin: auto;
-    display: flex;
-    } */
-    nav {
-        position: fixed;
-        right: 40px;
-        top: 30px;
-        width: 13%;
+    #container-icon-menu {
+        display: flex;
+        margin-right: 2px;
+        color: #838383;
+	}
+
+    #container-icon-menu *{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 1%;
     }
     
-    #container-icon-menu {
-		display: none;
-	}
-    
-    nav li {
+   /*nav li {
         background: rgba(255, 255, 255, 0.8);
         font-family: Arial;
         font-weight: bold;
@@ -70,7 +66,7 @@
 
     nav li div {
         margin: auto;
-    }
+    }*/
     .selected {
         box-shadow: 1px 1px 27px #58d9ff;
     }
@@ -81,16 +77,20 @@
         display: none !important;
     }
 
-    #content:before{
-
+    #background-content{
         position: absolute;
-        top: -50%;
-        left: -50%;
         background: url(../image/fondLM.png) no-repeat center fixed;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardis�e */
+        z-index: -100;
+        padding: 5px;
     }
 
+    #content{
+        background: rgba(255,255,255,0.8);
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
     /* -- Lettre de motivation */
     #LM article {
         margin: auto;
@@ -98,12 +98,12 @@
         margin-bottom: 2.5%;
         overflow: auto;
         width: 31%;
-        background: rgba(255, 255, 255, 0.7);
-        box-shadow: 1px 1px 27px #555;
+        background: rgba(255, 255, 255);
         font-family: Trebuchet MS;
         text-align: justify;
         padding: 2%;
         padding-bottom: 1%;
+
     }
     #date {
         margin-right: 5%;

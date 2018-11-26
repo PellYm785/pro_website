@@ -27,29 +27,29 @@
 	
 	
 	nav {
-        position: fixed;
-        background: white;
-        height: 100%;
-        right: 0px;
-        top: 0px;
-    }
-    
-    #menu{
-		display: none;
-	}
-    
-    #container-icon-menu{
 		position: fixed;
-		right: 0px;
-        top: 0px;
-        padding: 16px;
-        background: grey;
-	}
-    
-    nav ul {
-    	margin-top: 90px;
+		display: flex;
+		background: #1b1b1b;
+		height: 4%;
 		width: 100%;
-		padding-left: 0px;
+		left: 0px;
+		top: 0px;
+    }
+
+	#container-icon-menu {
+		display: flex;
+		margin-right: 2px;
+		color: #838383;
+	}
+
+	#container-icon-menu *{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 2%;
+	}
+
+	nav ul{
+		display: none;
 	}
     
     nav li {
@@ -80,6 +80,21 @@
 		display: none !important;
 	}
 
+	#background-content{
+		position: absolute;
+		background: url(../image/fondLM.png) no-repeat center fixed;
+		-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+		background-size: cover; /* version standardis�e */
+		z-index: -100;
+		padding: 5px;
+	}
+
+	#content{
+		background: rgba(255,255,255,0.8);
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
 	/* -- Lettre de motivation */
 	#LM article {
 		margin: auto;
@@ -87,12 +102,12 @@
 		margin-bottom: 2.5%;
 		overflow: auto;
 		width: 70%;
-		background: rgba(255, 255, 255, 0.7);
-		box-shadow: 1px 1px 27px #555;
+		background: rgb(255, 255, 255);
 		font-family: Trebuchet MS;
 		text-align: justify;
 		padding: 3%;
 		padding-bottom: 1%;
+		border-radius: 7px;
 	}
 	#date {
 		margin-right: 5%;

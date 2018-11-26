@@ -27,7 +27,6 @@
 	<header>
         <video autoplay loop>
             <source src="image/video.mp4" type="video/mp4">
-
         </video>
         <h1>
             PRESENTATION NGBAMA William
@@ -36,7 +35,15 @@
 	
 
 	<nav id="menu">
-		
+        <div id="container-icon-menu">
+            <?php
+            include "image/icon-menu.svg";
+            ?>
+            <span>
+                Menu
+            </span>
+        </div>
+
 	    <ul>
 	        <li id="LM_in" class="selected" data-link="LM">
 	            <div>
@@ -50,9 +57,7 @@
 	        </li>
 	    </ul>
 	</nav>
-	<div id="container-icon-menu">
-		<?php
-		include "image/icon-menu.svg";
-		?>
-	</div>
+
+
+    <div id="background-content"></div>
     <div id="content">
