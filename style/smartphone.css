@@ -5,9 +5,7 @@
   html {
     margin: 0;
     padding: 0;
-    background: url(../image/fondLM.png) no-repeat center fixed;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardis�e */
+
   }
   body {
     overflow-y: scroll;
@@ -26,6 +24,9 @@
     margin: auto;
     margin-top: 1%;
     width: 50%;
+    background: url(../image/fondLM.png) no-repeat center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardis�e */
   }
   h1 {
     font-size: large;

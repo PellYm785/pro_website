@@ -5,10 +5,9 @@
     <title>
         Présentation
     </title>
-    <link rel="stylesheet" href="style/ordi_pleinEcran.css" />
+    <link rel="stylesheet" href="style/ordi_plein_ecran.css" />
     <link rel="stylesheet" href="style/ordi_fenetre.css" />
     <link rel="stylesheet" href="style/smartphone.css" />
-    <link rel="stylesheet" href="libs/css/OverlayScrollbars.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
@@ -26,16 +25,16 @@
 <body>
 
 	<header>
-	    <div id="border_title_top" class="border_title">
-	    </div>
-	    <h1>
-	        PRESENTATION NGBAMA William
-	    </h1>
-	    <div id="border_title_bottom" class="border_title">
-	    </div>
+        <video autoplay loop>
+            <source src="image/video.mp4" type="video/mp4">
+
+        </video>
+        <h1>
+            PRESENTATION NGBAMA William
+        </h1>
 	</header>
 	
-	
+
 	<nav id="menu">
 		
 	    <ul>
@@ -56,3 +55,4 @@
 		include "image/icon-menu.svg";
 		?>
 	</div>
+    <div id="content">
