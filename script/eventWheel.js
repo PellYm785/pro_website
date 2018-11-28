@@ -1,4 +1,4 @@
- var event_wheel = (function(window,document) {
+ var eventWheel = (function(window, document) {
 
 
                 var prefix = "", _addEventListener, support;

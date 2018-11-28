@@ -52,7 +52,7 @@ $('*').each(function(index, element){
             $scrollbar.css({top: position.top});
             $scrollbar.css({left: position.left + $(element).width() - 5});
 			
-            $(element).bind(event_wheel, function(event){
+            $(element).bind(eventWheel, function(event){
 
                     scroll = event.originalEvent.deltaY;
 

@@ -41,8 +41,8 @@ CREATE TABLE `CodeSource` (
 
 INSERT INTO `CodeSource` (`id_code`, `nom`, `type`, `lien`) VALUES
 (1, 'index', 'HTML', 'https://nw-pres.fr/index.html'),
-(2, 'ordi_pleinEcran', 'CSS', 'https://nw-pres.fr/style/ordi_plein_ecran.css'),
-(3, 'ordi_fenetre', 'CSS', 'https://nw-pres.fr/style/ordi_fenetre.css'),
+(2, 'ordi_pleinEcran', 'CSS', 'https://nw-pres.fr/style/pleinEcran.css'),
+(3, 'ordi_fenetre', 'CSS', 'https://nw-pres.fr/style/fenetre.css'),
 (4, 'smartphone', 'CSS', 'https://nw-pres.fr/style/smartphone.css'),
 (5, 'base', 'Javascript', 'https://nw-pres.fr/script/base.js'),
 (6, 'construction_LM', 'Javascript', 'https://nw-pres.fr/script/construction_LM.js'),

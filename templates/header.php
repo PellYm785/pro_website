@@ -5,8 +5,8 @@
     <title>
         Présentation
     </title>
-    <link rel="stylesheet" href="style/ordi_plein_ecran.css" />
-    <link rel="stylesheet" href="style/ordi_fenetre.css" />
+    <link rel="stylesheet" href="style/pleinEcran" />
+    <link rel="stylesheet" href="style/fenetre.css" />
     <link rel="stylesheet" href="style/smartphone.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -16,6 +16,7 @@
         integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
         crossorigin="anonymous">
     </script>
+    <script src="script/pluginPageEffect.js"></script>
     <script>
         $(document).ready(function(){
                 $("body").css({ height: $(window).height()*0.85});

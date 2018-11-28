@@ -29,7 +29,7 @@
 	nav {
 		position: fixed;
 		display: flex;
-		background: #1b1b1b;
+		background-color: #1b1b1b;
 		height: 4%;
 		width: 100%;
 		left: 0px;
@@ -49,19 +49,24 @@
 	}
 
 	nav ul{
-		display: none;
+		/*display: none;*/
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		height: 100em;
+		background-color: #111111;
 	}
     
     nav li {
+		color: white;
+		display: flex;
+		font-family: Arial;
+		/*font-weight: bold;*/
+		height: 40px;
     	padding-left: 50px;
         padding-right: 50px;
-        background: rgba(255, 255, 255, 0.8);
-        font-family: Arial;
-        font-weight: bold;
-        display: flex;
         list-style: none;
-        height: 40px;
-        
+		border-bottom: white 1px;
     }
 
 
@@ -71,7 +76,7 @@
         text-align: center;
     }
     .selected {
-       background-color: #58d9ff;
+       color: #58d9ff;
     }
     nav div {
         margin: auto;
