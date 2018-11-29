@@ -48,27 +48,41 @@
 		margin-left: 2%;
 	}
 
-	nav ul{
-		/*display: none;*/
+	#menu {
 		position: fixed;
 		top: 0px;
 		right: 0px;
 		height: 100em;
+		padding-left: 50px;
+		padding-right: 50px;
 		background-color: #111111;
 	}
-    
+
+	#close-menu{
+		position: fixed;
+		top: 15px;
+		right: 15px;
+	}
+
+	nav ul {
+		margin-top: 40px;
+	}
+
     nav li {
 		color: white;
 		display: flex;
 		font-family: Arial;
 		/*font-weight: bold;*/
 		height: 40px;
-    	padding-left: 50px;
-        padding-right: 50px;
         list-style: none;
-		border-bottom: white 1px;
+		border-bottom: rgba(255,255,255,0.25) solid 1px;
+		padding-left: 1em;
+		padding-right: 1em;
     }
 
+	nav li:last-of-type{
+		border-bottom: 0;
+	}
 
     nav li div {
         margin: auto;

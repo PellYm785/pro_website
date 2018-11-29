@@ -35,7 +35,7 @@
 	</header>
 	
 
-	<nav id="menu">
+	<nav>
         <div id="container-icon-menu">
             <?php
             include "image/icon-menu.svg";
@@ -45,18 +45,23 @@
             </span>
         </div>
 
-	    <ul>
-	        <li id="LM_in" class="selected" data-link="LM">
-	            <div>
-	                Lettre de motivation
-	            </div>
-	        </li>
-	        <li id="CV_in" data-link="CV">
-	            <div>
-	                Curriculum Vitae
-	            </div>
-	        </li>
-	    </ul>
+        <div id="menu">
+                <?php
+                include "image/close-menu.svg";
+                ?>
+            <ul>
+                <li id="LM_in" class="selected" data-link="LM">
+                    <div>
+                        Lettre de motivation
+                    </div>
+                </li>
+                <li id="CV_in" data-link="CV">
+                    <div>
+                        Curriculum Vitae
+                    </div>
+                </li>
+            </ul>
+        </div>
 	</nav>
 
 
