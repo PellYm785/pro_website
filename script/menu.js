@@ -2,6 +2,7 @@ var $menu = $('#menu');
 var $displayerMenu = $("#container-icon-menu");
 var $hiderMenu = $('#close-menu');
 var widthMenu = $menu.width()+100;
+var $listLiMenu = $('#menu').children('ul').children('li');
 
 $menu.css("right", - widthMenu);
 $hiderMenu.css("right", -(widthMenu+15));
@@ -37,7 +38,7 @@ $(window).resize(function(){
     }
 });
 
-/*
+
 $listLiMenu.each(function(index, element){
     $(element).click(function(){
         if(!$(element).hasClass('selected')){
@@ -54,6 +55,6 @@ $listLiMenu.each(function(index, element){
             }
         }
     });
-});*/
+});
 
 

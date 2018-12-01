@@ -27,7 +27,7 @@
 
 	<header>
         <video autoplay loop>
-            <source src="image/video.mp4" type="video/mp4">
+            <source src="image/video-background.mp4" type="video/mp4">
         </video>
         <h1>
             PRESENTATION NGBAMA William
@@ -58,6 +58,11 @@
                 <li id="CV_in" data-link="CV">
                     <div>
                         Curriculum Vitae
+                    </div>
+                </li>
+                <li id="Contact_in" data-link="Contact">
+                    <div>
+                        Contact
                     </div>
                 </li>
             </ul>

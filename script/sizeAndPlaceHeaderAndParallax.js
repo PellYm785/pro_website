@@ -2,19 +2,11 @@
 var switcher = new Switch('.section-cv') ;
 
 $('video').css('width', $(window).width());
-setTimeout(function () {
-    $('header').css('height', $('video').height());
-},10);
-
-$('header').css('height', $('video').height());
 setTimeout(resizeAndReplaceBackContent, 15);
 
 
 $(window).resize(function() {
     $('video').css('width', $(window).width());
-    setTimeout(function () {
-        $('header').css('height', $('video').height());
-    }, 10);
     setTimeout(resizeAndReplaceBackContent, 15);
 });
 

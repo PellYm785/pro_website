@@ -10,6 +10,7 @@
 		background: linear-gradient(135deg, rgba(134, 255, 148, 0.5) 0%, rgba(0,0,0,0.5) 74%);
 		margin: auto;
 		display: flex;
+		height: 50%;
 	}
 
 	video{
@@ -109,7 +110,7 @@
 	}
 
 	#content{
-		background: rgba(255,255,255,0.8);
+		background: rgba(255,255,255,0.9);
 		padding-top: 25px;
 		padding-bottom: 25px;
 	}
@@ -122,6 +123,9 @@
 		overflow: auto;
 		width: 70%;
 		background: rgb(255, 255, 255);
+		border-style: solid;
+		border-width: 1px;
+		border-color: #e0e0e0;
 		font-family: Trebuchet MS;
 		text-align: justify;
 		padding: 3%;
@@ -240,6 +244,71 @@
     #container-fleche-droite *, #container-fleche-gauche *{
     	margin:auto;
     }
+
+	/*--Contact--*/
+
+    #Contact{
+		display: flex;
+        flex-direction: column;
+        background-color: #fff;
+		width: 70%;
+		margin: auto;
+		border-radius: 20px;
+		border: #cfd0c3 solid 1px;
+	}
+
+
+
+	#Contact *{
+		width: 90%;
+		margin: auto;
+	}
+
+	#Contact label{
+		background-color: black;
+		color: white;
+		font-family: Arial;
+		padding: 10px;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		width: 100%;
+	}
+
+	#Contact label p{
+		width: 90%;
+	}
+
+	#emailContact{
+		border: 0;
+	}
+
+	#objet{
+		border-width: 1px;
+		border-left: 0;
+		border-right: 0;
+		border-top-color: #000;
+		border-bottom-color: #000 ;
+	}
+
+	#Contact input{
+		padding: 8px;
+	}
+
+	#sendButton{
+		width: 15%;
+		padding: 8px;
+		background-color: #0072c2;
+		color: white;
+		border: 0;
+		border-radius: 10px;
+		margin-right: 0px;
+	}
+
+	#textarea{
+		height: 500px;
+		background-color: white;
+		font-family: Arial;
+	}
 
 	footer {
 		height: 2em;
