@@ -1,6 +1,7 @@
-function Category() {
+function Category(name, icon) {
     this.name = name;
     this.type = 'Category';
+    this.icon = icon;
     this.items = null;
 }
 
