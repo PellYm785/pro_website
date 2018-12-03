@@ -48,6 +48,7 @@ $listLiMenu.each(function(index, element){
             $('section').addClass("hide");
             $('#'+$(element).data('link')).removeClass("hide");
             $('#'+$(element).data('link')).addClass("show");
+            $('#background-content').css('height', $('#content').height()+50);
             if($(element)[0].id == 'CV_in' && $(window).width() < 1024){
                 switcher.build();
             }else{

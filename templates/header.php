@@ -5,7 +5,7 @@
     <title>
         Présentation
     </title>
-    <link rel="stylesheet" href="style/pleinEcran" />
+    <link rel="stylesheet" href="style/1920x1080.css" />
     <link rel="stylesheet" href="style/fenetre.css" />
     <link rel="stylesheet" href="style/smartphone.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.js"

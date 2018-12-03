@@ -31,7 +31,7 @@
 		position: fixed;
 		display: flex;
 		background-color: #1b1b1b;
-		height: 4%;
+		height: 5%;
 		width: 100%;
 		left: 0px;
 		top: 0px;
@@ -41,12 +41,14 @@
 		display: flex;
 		margin-right: 2px;
 		color: #838383;
+		width: 10%;
 	}
 
 	#container-icon-menu *{
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-left: 2%;
+		font-family: Arial;
+		margin-right: 15%;
 	}
 
 	#menu {
@@ -252,6 +254,7 @@
         flex-direction: column;
         background-color: #fff;
 		width: 70%;
+		height: 50%;
 		margin: auto;
 		border-radius: 20px;
 		border: #cfd0c3 solid 1px;
@@ -304,7 +307,7 @@
 		margin-right: 0px;
 	}
 
-	#textarea{
+	#message{
 		height: 500px;
 		background-color: white;
 		font-family: Arial;

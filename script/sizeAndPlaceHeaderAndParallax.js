@@ -2,7 +2,10 @@
 var switcher = new Switch('.section-cv') ;
 
 $('video').css('width', $(window).width());
-setTimeout(resizeAndReplaceBackContent, 15);
+$('header').ready(function (){
+    setTimeout(resizeAndReplaceBackContent, 15);
+});
+
 
 
 $(window).resize(function() {
