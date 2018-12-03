@@ -46,7 +46,7 @@ Section.prototype.delete = function(category){
             if(found) {
                 this.categories.splice(category, i);
             }else {
-                throw 'category doesn't exist';
+                throw 'category doesn\'t exist';
             }
             break;
     }
