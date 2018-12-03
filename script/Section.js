@@ -1,18 +1,18 @@
 function Section (name){
     this.name = name;
-    this.categories = null;
     this.type = 'Section';
+    this.categories = null;
 }
 
 Section.prototype.add = function(category){
-    if(category.type === 'category') {
+    if(category.type === 'Category') {
         if (this.categories) {
             this.categories.push(category);
         } else {
             this.categories = [category];
         }
     }else {
-        throw 'It isn\'t category object';
+        throw 'It isn\'t Category object';
     }
 };
 
@@ -26,11 +26,11 @@ Section.prototype.delete = function(category){
             this.categories.splice(category,1);
             break;
         case 'object':
-            if(category.type === 'category') {
+            if(category.type === 'Category') {
                 var index = this.categories.indexOf(category);
                 this.categories.splice(category,index);
             }else{
-                throw 'It isn\'t category object';
+                throw 'It isn\'t Category object';
             }
             break;
         case 'string':
