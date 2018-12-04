@@ -1,11 +1,10 @@
 function Section (name){
     this.name = name;
-    this.type = 'Section';
     this.categories = null;
 }
 
 Section.prototype.add = function(category){
-    if(category.type === 'Category') {
+    if(category instanceof Category) {
         if (this.categories) {
             this.categories.push(category);
         } else {
@@ -26,7 +25,7 @@ Section.prototype.delete = function(category){
             this.categories.splice(category,1);
             break;
         case 'object':
-            if(category.type === 'Category') {
+            if(category instanceof Category) {
                 var index = this.categories.indexOf(category);
                 this.categories.splice(category,index);
             }else{
@@ -49,5 +48,22 @@ Section.prototype.delete = function(category){
                 throw 'category doesn\'t exist';
             }
             break;
+        default:
+        	throw 'Pass a number, string or Category';
     }
 };
+
+Section.prototype.build = function(){
+	if(!this.categories){
+        throw 'No categories is set';
+    }
+
+	var section = document.createElement('div');
+	section.className = "section";
+	
+	this.categories.forEach(function(category){
+		section.appendChild(category.build());
+	});
+	
+	return section;
+}

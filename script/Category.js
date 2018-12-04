@@ -1,12 +1,11 @@
 function Category(name, icon) {
     this.name = name;
-    this.type = 'Category';
     this.icon = icon;
     this.items = null;
 }
 
 Category.prototype.add = function(item){
-    if(item.type === 'Item') {
+    if(item instanceof Item) {
         if (this.items) {
             this.items.push(item);
         } else {
@@ -27,7 +26,7 @@ Category.prototype.delete = function(item){
             this.items.splice(item,1);
             break;
         case 'object':
-            if(item.type === 'Item') {
+            if(item instanceof Item) {
                 var index = this.items.indexOf(item);
                 this.items.splice(item,index);
             }else{
@@ -50,5 +49,23 @@ Category.prototype.delete = function(item){
                 throw 'item doesn\'t exist';
             }
             break;
+        default:
+        	throw 'Pass a number, string or Item';
     }
 };
+
+Category.prototype.build = function(){
+	if(!this.items){
+        throw 'No items is set';
+    }
+	
+	var category = document.createElement('div');
+	category.className = "category";
+	
+	this.items.forEach(function(item){
+		category.appendChild(item.build());
+	});
+	
+	return category;
+}
+
