@@ -17,6 +17,10 @@
         crossorigin="anonymous">
     </script>
     <script src="script/pluginPageEffect.js"></script>
+    <script src="script/moduleRI/Item"></script>
+    <script src="script/moduleRI/Category"></script>
+    <script src="script/moduleRI/Section"></script>
+    <script src="script/moduleRI/RI"></script>
     <script>
         $(document).ready(function(){
                 $("body").css({ height: $(window).height()*0.85});
